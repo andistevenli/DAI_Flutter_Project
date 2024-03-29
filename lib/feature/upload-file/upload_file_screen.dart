@@ -1,4 +1,4 @@
-import 'package:dai_sales/util/responsive/size_config.dart';
+import 'package:dai_sales/utils/responsive/size_config.dart';
 import 'package:flutter/material.dart';
 
 class UploadFileScreen extends StatefulWidget {
