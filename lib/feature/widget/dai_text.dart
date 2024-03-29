@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:dai_sales/utils/constant/unit.dart';
 import 'package:dai_sales/utils/enum/finite_text_hierarchy.dart';
 import 'package:flutter/material.dart';
