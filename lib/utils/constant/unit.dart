@@ -32,3 +32,4 @@ const double snackbarPaddingHorizontal = 16;
 const double snackbarWidth = 500;
 const int snackbarDuration = 2;
 const double snackbarIconSize = 50;
+const double headingPadding = 24;
