@@ -50,6 +50,7 @@ class _DAIChipState extends State<DAIColumnChip> {
                     ? green
                     : red,
             width: null,
+            textAlign: TextAlign.center,
           ),
           widget.finiteChipStatus == FiniteChipStatus.info
               ? 0.0.hspace

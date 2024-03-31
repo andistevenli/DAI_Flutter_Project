@@ -6,11 +6,15 @@ import 'package:flutter/material.dart';
 
 class DAITextButton extends StatefulWidget {
   final String content;
+  final double width;
+  final TextAlign? textAlign;
   final void Function()? onPressed;
 
   const DAITextButton({
     super.key,
     required this.content,
+    required this.width,
+    required this.textAlign,
     required this.onPressed,
   });
 
@@ -62,7 +66,8 @@ class _DAITextButtonState extends State<DAITextButton> {
         ),
       ),
       child: DAIText(
-        width: null,
+        width: widget.width,
+        textAlign: widget.textAlign,
         content: widget.content,
         textHierarchy: TextHierarchy.body,
         fontWeight: FontWeight.bold,

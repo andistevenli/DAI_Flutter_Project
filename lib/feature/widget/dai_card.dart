@@ -7,7 +7,6 @@ import 'package:dai_sales/utils/extention/white_space.dart';
 import 'package:flutter/material.dart';
 
 class DAICard extends StatefulWidget {
-  final bool forBigCard;
   final String imageAssetPath;
   final String captionContent;
   final String buttonContent;
@@ -15,7 +14,6 @@ class DAICard extends StatefulWidget {
 
   const DAICard({
     super.key,
-    required this.forBigCard,
     required this.imageAssetPath,
     required this.captionContent,
     required this.buttonContent,
@@ -30,9 +28,8 @@ class _DAICardState extends State<DAICard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: bg,
       padding: const EdgeInsets.all(cardPadding),
-      width: widget.forBigCard == true ? cardBigWidth : cardSmallWidth,
+      width: cardWidth,
       decoration: BoxDecoration(
         color: bg,
         borderRadius: BorderRadius.circular(border40),
@@ -44,12 +41,9 @@ class _DAICardState extends State<DAICard> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
-              color: white,
               padding: const EdgeInsets.all(cardPadding),
               width: double.infinity,
-              height: widget.forBigCard == true
-                  ? cardImageBigHeight
-                  : cardImageSmallHeight,
+              height: cardImageHeight,
               decoration: BoxDecoration(
                 color: white,
                 borderRadius: BorderRadius.circular(border20),
@@ -60,18 +54,19 @@ class _DAICardState extends State<DAICard> {
                 height: double.infinity,
               ),
             ),
-            24.0.hspace,
+            20.0.vspace,
             DAIText(
               width: double.infinity,
+              textAlign: TextAlign.start,
               content: widget.captionContent,
               textHierarchy: TextHierarchy.caption,
               fontWeight: FontWeight.normal,
               color: primary300,
             ),
-            24.0.hspace,
+            20.0.vspace,
             DAIButton(
               primary: true,
-              width: widget.forBigCard == true ? buttonWideWidth : buttonWidth,
+              width: buttonWidth,
               content: widget.buttonContent,
               onPressed: widget.onPressed,
             ),
