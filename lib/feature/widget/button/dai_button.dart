@@ -122,7 +122,8 @@ class _DAIButtonState extends State<DAIButton> {
         ),
       ),
       child: DAIText(
-        width: null,
+        width: double.infinity,
+        textAlign: TextAlign.center,
         content: widget.content,
         textHierarchy: TextHierarchy.body,
         fontWeight: FontWeight.bold,

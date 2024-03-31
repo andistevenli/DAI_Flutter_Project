@@ -84,9 +84,13 @@ class _DAIBreadcrumbButtonState extends State<DAIBreadcrumbButton> {
             borderRadius: BorderRadius.circular(border16),
           ),
         ),
+        fixedSize: const MaterialStatePropertyAll<Size>(
+          Size(double.nan, breadcrumbButtonHeight),
+        ),
       ),
       child: DAIText(
         width: null,
+        textAlign: TextAlign.center,
         content: widget.content,
         textHierarchy: TextHierarchy.body,
         fontWeight: FontWeight.bold,

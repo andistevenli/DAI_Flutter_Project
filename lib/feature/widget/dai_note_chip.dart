@@ -46,6 +46,7 @@ class _DAINoteChipState extends State<DAINoteChip> {
             fontWeight: FontWeight.normal,
             color: widget.forExistNote == true ? green : red,
             width: null,
+            textAlign: TextAlign.center,
           ),
         ],
       ),

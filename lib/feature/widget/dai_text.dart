@@ -8,6 +8,7 @@ class DAIText extends StatefulWidget {
   final FontWeight? fontWeight;
   final Color? color;
   final double? width;
+  final TextAlign? textAlign;
 
   const DAIText({
     super.key,
@@ -16,6 +17,7 @@ class DAIText extends StatefulWidget {
     required this.fontWeight,
     required this.color,
     required this.width,
+    required this.textAlign,
   });
 
   @override
@@ -29,6 +31,7 @@ class _DAITextState extends State<DAIText> {
       width: widget.width,
       child: Text(
         widget.content,
+        textAlign: widget.textAlign,
         style: TextStyle(
           fontSize: widget.textHierarchy == TextHierarchy.table
               ? textSizeTable

@@ -7,7 +7,7 @@ const String reportTitle = "What Type Of Report Do You Want To Know ?";
 const String homeCaptionTarget =
     "Click the button below if you want to manage the salesman target per month";
 const String homeCaptionReport =
-    "Click the button below if you want to generate some reports";
+    "Click the button below if you want to generate some reports (profit, stock, etc)";
 const String homeButtonTarget = "Manage Targets";
 const String homeButtonReport = "Generate Reports";
 const String uploadFileBodyTop =
@@ -48,3 +48,7 @@ const String qtyKirim = "QtyKirim";
 const String nilaiNetto = "NilaiNetto";
 const String category = "Category";
 const String remark = "Remark";
+const String breadcrumbHome = "Home";
+const String breadcrumbUploadFile = "Upload File";
+const String breadcrumbReport = "Report";
+const String toolTipHome = "Back To Home";

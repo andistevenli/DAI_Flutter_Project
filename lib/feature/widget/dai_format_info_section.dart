@@ -49,6 +49,7 @@ class _FormatInfoSectionState extends State<FormatInfoSection> {
               fontWeight: FontWeight.normal,
               color: black,
               width: double.infinity,
+              textAlign: TextAlign.start,
             ),
             20.0.vspace,
             Expanded(
@@ -77,6 +78,7 @@ class _FormatInfoSectionState extends State<FormatInfoSection> {
               fontWeight: FontWeight.normal,
               color: black,
               width: double.infinity,
+              textAlign: TextAlign.start,
             ),
           ],
         ),
