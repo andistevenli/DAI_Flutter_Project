@@ -1,6 +1,7 @@
 import 'package:dai_sales/feature/home/home_screen.dart';
 import 'package:dai_sales/feature/report/report_controller.dart';
 import 'package:dai_sales/feature/report/report_screen.dart';
+import 'package:dai_sales/feature/upload-file/upload_file_controller.dart';
 import 'package:dai_sales/feature/upload-file/upload_file_screen.dart';
 import 'package:dai_sales/utils/constant/route.dart';
 import 'package:dai_sales/utils/constant/text.dart';
@@ -21,6 +22,9 @@ class DAIApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (context) => ReportController(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => UploadFileController(),
         ),
       ],
       child: MaterialApp(

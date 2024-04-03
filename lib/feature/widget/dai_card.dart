@@ -56,6 +56,7 @@ class _DAICardState extends State<DAICard> {
             ),
             20.0.vspace,
             DAIText(
+              canCopy: false,
               width: double.infinity,
               textAlign: TextAlign.start,
               content: widget.captionContent,

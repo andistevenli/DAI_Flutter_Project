@@ -37,10 +37,11 @@ class _DAIChipState extends State<DAIColumnChip> {
         borderRadius: BorderRadius.circular(border16),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           DAIText(
+            canCopy: true,
             content: widget.content,
             textHierarchy: TextHierarchy.caption,
             fontWeight: FontWeight.normal,

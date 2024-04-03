@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: white,
       appBar: AppBar(
         title: const DAIText(
+          canCopy: false,
           content: home,
           textHierarchy: TextHierarchy.body,
           fontWeight: FontWeight.bold,
@@ -56,6 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             screenPaddingTop.vspace,
             const DAIText(
+              canCopy: false,
               content: homeTitle,
               textHierarchy: TextHierarchy.title,
               fontWeight: FontWeight.bold,

@@ -13,11 +13,13 @@ const String homeButtonReport = "Generate Reports";
 const String uploadFileBodyTop =
     "Upload your Excel file (.xlsx) here to generate a report. There are 17 columns, they are :";
 const String uploadFileBodyBottom =
-    "Make sure those columns exist and are ordered";
+    "and make sure that columns exist and are ordered.";
 const String uploadFileButtonUpload = "Click Here To Upload";
 const String uploadFileButtonGuidance = "Click Here For Guidance";
 const String uploadFileMessageError =
-    "Failed to process, check out the mandatory format below !";
+    "Failed to process, check out the mandatory format carefully !";
+const String uploadFileMessageSuccess =
+    "Your Excel file is uploaded successfully";
 const String uploadFileMessageExist = "means exist";
 const String uploadFileMessageDoesNotExist = "means does not exist";
 const String reportCaptionProfit =
@@ -31,7 +33,7 @@ const String reportButtonStock = "Stock Report";
 const String reportButtonSalesman = "Salesman Report";
 const String reportButtonCombine = "Combine Them All Into A Report";
 const String breadcrumbNavigationSeparator = ">";
-const String noSO = "NoSo";
+const String noSO = "NoSO";
 const String kodeCustomer = "KodeCustomer";
 const String namaCustomer = "NamaCustomer";
 const String noPO = "NoPO";
@@ -52,3 +54,22 @@ const String breadcrumbHome = "Home";
 const String breadcrumbUploadFile = "Upload File";
 const String breadcrumbReport = "Report";
 const String toolTipHome = "Back To Home";
+const List<String> columns = [
+  noSO,
+  kodeCustomer,
+  namaCustomer,
+  noPO,
+  noSJ,
+  tglOrder,
+  tglKirim,
+  kodeScala,
+  eanCode,
+  brand,
+  tradeChannel,
+  salesman,
+  qtyOrder,
+  qtyKirim,
+  nilaiNetto,
+  category,
+  remark,
+];

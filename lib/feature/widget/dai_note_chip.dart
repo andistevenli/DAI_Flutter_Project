@@ -41,6 +41,7 @@ class _DAINoteChipState extends State<DAINoteChip> {
           ),
           16.0.hspace,
           DAIText(
+            canCopy: false,
             content: uploadFileMessageExist,
             textHierarchy: TextHierarchy.caption,
             fontWeight: FontWeight.normal,

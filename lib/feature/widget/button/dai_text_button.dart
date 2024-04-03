@@ -28,6 +28,7 @@ class _DAITextButtonState extends State<DAITextButton> {
     return TextButton(
       onPressed: widget.onPressed,
       style: ButtonStyle(
+        overlayColor: const MaterialStatePropertyAll(Colors.transparent),
         textStyle: MaterialStateProperty.resolveWith<TextStyle>(
           (Set<MaterialState> states) {
             if (states.contains(MaterialState.pressed)) {
@@ -58,14 +59,15 @@ class _DAITextButtonState extends State<DAITextButton> {
           },
         ),
         elevation: const MaterialStatePropertyAll(elevation),
-        fixedSize: const MaterialStatePropertyAll(
-          Size(
-            buttonWidth,
-            buttonHeight,
-          ),
-        ),
+        // fixedSize: const MaterialStatePropertyAll(
+        //   Size(
+        //     buttonWidth,
+        //     buttonHeight,
+        //   ),
+        // ),
       ),
       child: DAIText(
+        canCopy: false,
         width: widget.width,
         textAlign: widget.textAlign,
         content: widget.content,

@@ -89,6 +89,7 @@ class _DAIBreadcrumbButtonState extends State<DAIBreadcrumbButton> {
         ),
       ),
       child: DAIText(
+        canCopy: false,
         width: null,
         textAlign: TextAlign.center,
         content: widget.content,

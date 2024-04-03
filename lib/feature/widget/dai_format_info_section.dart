@@ -8,27 +8,53 @@ import 'package:dai_sales/utils/enum/finite_text_hierarchy.dart';
 import 'package:dai_sales/utils/extention/white_space.dart';
 import 'package:flutter/material.dart';
 
-class FormatInfoSection extends StatefulWidget {
+class DAIFormatInfoSection extends StatefulWidget {
   final int totalChip;
-  final String chipContent;
-  final FiniteChipStatus finiteChipStatus;
+  final bool forInfo;
+  final List<String> chipContent;
 
-  const FormatInfoSection({
+  const DAIFormatInfoSection({
     super.key,
     required this.totalChip,
+    required this.forInfo,
     required this.chipContent,
-    required this.finiteChipStatus,
   });
 
   @override
-  State<FormatInfoSection> createState() => _FormatInfoSectionState();
+  State<DAIFormatInfoSection> createState() => _FormatInfoSectionState();
 }
 
-class _FormatInfoSectionState extends State<FormatInfoSection> {
+class _FormatInfoSectionState extends State<DAIFormatInfoSection> {
+  FiniteChipStatus check(int index) {
+    
+    if (widget.forInfo == true) {
+      return FiniteChipStatus.info;
+    } else {
+      if (columns[index] != widget.chipContent[index]) {
+      return FiniteChipStatus.notExist;
+    } else {
+      return FiniteChipStatus.exist;
+    }
+      // late bool isExist;
+      // for (var element in widget.chipContent) {
+      //   if (columns[index] == element) {
+      //     isExist = true;
+      //     break;
+      //   } else {
+      //     isExist = false;
+      //   }
+      // }
+      // if (isExist == true) {
+      //   return FiniteChipStatus.exist;
+      // } else {
+      //   return FiniteChipStatus.notExist;
+      // }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: bg,
       padding: const EdgeInsets.all(cardPadding),
       width: formatInfoSectionWidth,
       height: formatInfoSectionHeight,
@@ -44,6 +70,7 @@ class _FormatInfoSectionState extends State<FormatInfoSection> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             const DAIText(
+              canCopy: false,
               content: uploadFileBodyTop,
               textHierarchy: TextHierarchy.caption,
               fontWeight: FontWeight.normal,
@@ -63,8 +90,8 @@ class _FormatInfoSectionState extends State<FormatInfoSection> {
                 ),
                 child: ListView.separated(
                   itemBuilder: (context, index) => DAIColumnChip(
-                    content: widget.chipContent,
-                    finiteChipStatus: widget.finiteChipStatus,
+                    content: widget.chipContent[index],
+                    finiteChipStatus: check(index),
                   ),
                   separatorBuilder: (context, index) => space16.vspace,
                   itemCount: widget.totalChip,
@@ -73,6 +100,7 @@ class _FormatInfoSectionState extends State<FormatInfoSection> {
             ),
             20.0.vspace,
             const DAIText(
+              canCopy: false,
               content: uploadFileBodyBottom,
               textHierarchy: TextHierarchy.caption,
               fontWeight: FontWeight.normal,
