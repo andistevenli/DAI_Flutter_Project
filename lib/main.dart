@@ -1,19 +1,18 @@
-import 'package:dai_sales/feature/home/home_screen.dart';
 import 'package:dai_sales/feature/report/report_controller.dart';
 import 'package:dai_sales/feature/report/report_screen.dart';
 import 'package:dai_sales/feature/upload-file/upload_file_screen.dart';
-import 'package:dai_sales/utils/constant/route.dart';
-import 'package:dai_sales/utils/constant/text.dart';
-import 'package:dai_sales/utils/key/navigator.dart';
+import 'package:dai_sales/util/constant/route.dart';
+import 'package:dai_sales/util/constant/text.dart';
+import 'package:dai_sales/util/key/navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const DAIApp());
+  runApp(const DAISalesApp());
 }
 
-class DAIApp extends StatelessWidget {
-  const DAIApp({super.key});
+class DAISalesApp extends StatelessWidget {
+  const DAISalesApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +26,8 @@ class DAIApp extends StatelessWidget {
         title: projectName,
         debugShowCheckedModeBanner: false,
         navigatorKey: navigatorKey,
-        initialRoute: homeRoute,
+        initialRoute: uploadFileRoute,
         routes: {
-          homeRoute: (context) => const HomeScreen(),
           uploadFileRoute: (context) => const UploadFileScreen(),
           reportRoute: (context) => const ReportScreen(),
         },
